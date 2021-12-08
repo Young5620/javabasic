@@ -1,4 +1,50 @@
 
+/*
+  Generics - 입력되는 객체의 자료형을 강제한다.
+              
+ 
+ 
+ ArrayList pitches = new ArrayList();
+ pitches 라는 ArratList에 담을 수 있는 자료형은 String뿐이다.
+ 
+ ArrayList<String> pitches = new ArrayList<String>();
+
+*/
+
+import java.util.ArrayList;
+
+public class Main { //public 접근 제한자
+  public static void main(String[] args) {
+    //ArrayList aList = new ArrayList();
+    ArrayList<String> aList = new ArrayList<String>();
+
+    aList.add("hello");
+    aList.add("java");
+
+    // String hello = (String)aList.get(0);
+    // String java = (String)aList.get(1);
+    //Casting 강제 형변환
+
+    String hello = aList.get(0);
+    String java = aList.get(1);
+    // 제네릭스를 사용하여 자료형을 선언하면 그 이후로는 자료형에 대한 Casting이 필요없다.
+    // 이미 자바가 aList에는 반드시 String자료형만 추가 된다는 것을 알고있다.
+    // 제네릭스를 사용하면 형변환에 대한 불필요한 코딩과 잘못된 형변환들의 예외를 방지할 수 있다.
+    
+
+    System.out.println(hello);
+    System.out.println(java);
+
+
+  }
+}
+
+
+
+
+
+
+
 /* List 리스트
   배열과 비슷한 자료형, 크기가 정해지지 않고 동적으로 변한다. 배열은 그 크기가 생성 시에 정해지지만 
   리스트는 그 크기가 정해지지 않아 원하는 만큼 자유롭게 담을 수 있다.
@@ -40,21 +86,12 @@
 
 
 
-
-
-
-
-
-
-
-
 /*
   배열 array - 여러개의 원소를 한번에 담는 자료형/ 자료의 집합/ 배열은 그 길이가 고정된다. 
                 즉, 한번 생성하면 길이를 수정할 수 없다.
   int engScoreKim = 80; // 1개만 저장
   int[] engScore = {80,90,70,65,100};
   String[] names = {"Kim", "Park","son", "yoon", "Lee"}
-
 
 */
 
@@ -88,10 +125,6 @@
 
 
 
-
-
-
-
 // char 문자
 // class Main {
 //   public static void main (String[] args) {
@@ -105,13 +138,8 @@
 
 
 
-
-
-
-
 /*
   Bool(불 Boolean) true 1(0이 아닌 모든것), false 0
-
 
 */
 
@@ -127,12 +155,6 @@
 //     }
 //   }
 // }
-
-
-
-
-
-
 
 
 /*
@@ -163,6 +185,7 @@
 //     System.out.println(a.equals(c));
 //   }
 // }
+
 
 // indexOf 문자열에서 특정 문자가 시작되는 위치(인덱스)를 리턴
 
@@ -203,11 +226,6 @@
 //     System.out.println(a.toUpperCase());
 //   }
 // }
-
-
-
-
-
 
 
 /*
@@ -270,18 +288,6 @@ String b; 변수명 b는 String 자료형 변수임으로 b라는 변수에는 �
     System.out.println(i++);  // 0 출력을 하고 하나증가 후증가
     System.out.println(i);
 
-
-
-
-
-
-
-
-
-
-
-
-
     // int i = 0;
     // int j = 10;
 
@@ -299,13 +305,6 @@ String b; 변수명 b는 String 자료형 변수임으로 b라는 변수에는 �
     // --j;
 
 
-
-
-
-
-
-
-
     // int a = 10;
     // int b = 5;
 
@@ -321,16 +320,6 @@ String b; 변수명 b는 String 자료형 변수임으로 b라는 변수에는 �
   }
 }
 */
-
-
-
-
-
-
-
-
-
-
 
 
 /*
@@ -352,10 +341,6 @@ class Main {
   }
 }
 */
-
-
-
-
 
 
 // 주석 comment:  코드에 대한 설명을 적는다. 한줄주석
