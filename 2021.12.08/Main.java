@@ -7,14 +7,34 @@
 
 */
 
-import java.util.ArrayList;
+// import java.util.ArrayList;
 
-class Main {
-  public static void main(String[] args) {
+// public class Main {
+//   public static void main(String[] args) {
 
-    ArrayList pitches = new ArrayList();
-  }
-}
+//     ArrayList pitches = new ArrayList(); // new<-객체생성
+    
+//     pitches.add("123");
+//     pitches.add("234");
+//     pitches.add("789");
+//     pitches.add(0,"133"); // 특정위치에 지정
+
+//     System.out.println(pitches.get(1)); // 꺼내기
+//     //get() 메서드를 이용하여 특정 인덱스 값을 추출
+
+//     System.out.println(pitches.size());
+//     //size() 메서드를 이용하여 리스트의 개수를 확인
+
+//     System.out.println(pitches.contains("234"));
+//     //contains() 메서드를 이용하여 포함 여부 확인
+
+//     System.out.println(pitches.remove("789"));
+//     //remove() 메서드를 이용하여 해당 객체 삭제하고 결과를 리턴
+
+//     System.out.println(pitches.remove(0));
+//     //remove(0) 메서드를 이용하여 해당 인덱스(0번째)를 삭제
+//   }
+// }
 
 
 
