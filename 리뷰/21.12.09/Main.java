@@ -1,26 +1,289 @@
 
+
+// public class Main {
+//   public static void main(String[] args) {
+//     // if (5>4) {
+//     //   System.out.println(50);
+//     // } else {
+//     //   System.out.println(40);
+//     // }
+
+
+//     //if를 사용하지 않고 조건문 -> 삼황 연산자
+//     System.out.println((5>4) ? 50 :40);
+//   } 
+// }
+
+
+
+/*
+  반복문 - for
+*/
+
+// for each
+// public class Main {
+//   public static void main(String[] args) {
+//     String[] number = {"one", "two", "three"};
+//     for(String num:number)
+//     System.out.println(num);
+    
+//     // for(int i = 0; i < number.length ; i++) {
+//     //   System.out.println(number[i]);
+//     // }
+//   }
+// }
+
+// 1부터 50까지의 수들의 누적합계(break사용)
+// public class Main {
+//   public static void main(String[] args) {
+//     int sum = 0; 
+
+//     for(int i = 1; i <=100; i++) {
+//       sum = sum + i;
+//       if(i==50) {
+//         break;
+//       }
+//     }
+
+//     System.out.println(sum);
+//   }
+// }
+
+// 1부터 100까지의 숫자중 홀수들의 합계
+// public class Main {
+//   public static void main(String[] args) {
+//     int sum = 0;
+
+//     for (int i = 1; i <=100 ; i++) {
+//       if(i%2==0) {
+//         continue;
+//       }
+//       sum = sum + i;
+//     }
+//     System.out.println(sum);
+//   }
+// }
+
+// 1부터 100까지 합계
+// public class Main {
+//   public static void main(String[] args) {
+//     int sum = 0;
+//     for (int i = 1; i<=100 ; i++) {
+//       sum = sum + i;
+//       System.out.println("i = " + i +" sum = +" + sum);
+//     }
+//     System.out.println(sum);
+//   }
+// }
+
+
+
+
+/*
+  do while
+  조건이 참일 동안 반복 실행한다.
+  무조건 한 번은 반드시 실행된다.
+*/
+
+
+// import java.util.Scanner;
+// public class Main{
+// public static void main (String[] args) {
+//   int i = 0;
+//   Scanner scan = new Scanner(System.in);
+
+//   do {
+//     i = scan.nextInt();
+//     System.out.println("입력받은값:" + i);
+//   } while (i !=0);
+//   System.out.println("종료");
+// }
+// }
+
+
+/*
+  반복문 - while
+  while 은 조건이 참일 동안 계속 반복실행한다.
+*/
+
+
+// public class Main {
+//   public static void main(String[] args) {
+//     int i = 1;
+//     while(i<11) {
+//       if(i%2==0) {
+//         System.out.println(i);
+//       }
+//       i++;
+//     }
+//   }
+// }
+
+// public class Main {
+//   public static void main(String[] args) {
+//     int sum = 0;
+//     int i = 1;
+
+//     while (i<=100) {
+//       sum = sum + i;
+//       System.out.println("i = " + i + " sum = +" +sum);
+//       i++;
+//       System.out.println(sum);
+//     }
+//   }
+// }
+
+// continue 조건에 맞지 않는 경우 실행하지 않고 다시 반복문의 처음으로 돌아가도록 하는 방법
+// public class Main {
+//   public static void main (String[] args) {
+//     int i = 0;
+
+//     while (i<10) {
+//       i++;
+//       if (i%2 ==0) {
+//         System.out.println("continue로 인쇄를 하지 않는 수" + i);
+//         continue;
+//       }
+//       System.out.println(i);
+//     }
+//   }
+// }
+
+//break 반복문 실행하다가 break를 만나면 구문을 빠져나간다.
+
+// public class Main {
+//   public static void main(String[] args) {
+//     int coffee = 10;
+//     int money = 300;
+
+//     while(money>0) {
+//       System.out.println("커피를 드립니다.");
+//       coffee --;
+//       System.out.println("남은 커피는" + coffee+ "입니다.");
+//       if (coffee==0) {
+//         System.out.println("커피가 다 떨어졌습니다.");
+//         break;
+//       }
+//     }
+//   }
+// }
+
+// public class Main {
+//   public static void main(String[] args) {
+//     int i =0;
+
+//     while(true) {
+//       i++;
+//       System.out.println("나무를" + i + "번 찍었습니다.");
+//       if(i==9) {
+//         System.out.println("나무 넘어간다.");
+//         break;
+//       }
+//     }
+//   }
+// }
+
+// public class Main {
+//   public static void main(String[] args) {
+//     int i = 0;
+
+//     while(i<10) {
+//       i++;
+//       System.out.println("나무를" + i + "번 찍었습니다.");
+//       if(i==10) {
+//         System.out.println("나무 넘어간다~");
+//       }
+//     }
+//   }
+// }
+
+// public class Main{
+//   public static void main(String[] args) {
+//     int i = 0;
+
+//     while(i<10) {
+//       System.out.println(i+"hi~");
+//       i++;
+//     }
+//   }
+// }
+
+
 /*
   switch-case 구문 - if문과 비슷하지만 좀 더 절차를 단순화 시키는 조건 판단문
 */
 
-import java.util.Calendar;
-public class Main {
-  public static void main(String[] args) {
-    int month = Calendar.getInstance().get(Calendar.MONTH) + 1;
+// import java.util.Calendar;
+// public class Main {
+//   public static void main(String[] args) {
+//     int month = Calendar.getInstance().get(Calendar.MONTH) +1;
+//     String season = "";
 
-    String season = "";
+//     if (month <= 2) {
+//       System.out.println("겨울");
+//     } else if (month <=5) {
+//       System.out.println("봄");
+//     } else if (month <=8) {
+//       System.out.println("mar");
+//     } else if (month <=11) {
+//       System.out.println("apr");
+//     } else {
+//       System.out.println("겨울");
+//     }
+//   }
+// }
 
-    if(month == 12 || month == 1 || month==2) {
-      System.out.println("겨울");
-    } else if(month == 3 || month  ==4 || month==5) {
-      System.out.println("봄");
-    } else if(month == 6||month == 7||month == 8) {
-        System.out.println("여름");
-    } else if(month == 9||month == 10||month == 11) {
-        System.out.println("겨울");
-  }
-}
-}
+// public class Main {
+//   public static void main(String[] args) {
+//     int month = 3;
+//     String monthString = "";
+
+//     if (month == 1) {
+//       System.out.println("jan");
+//     } else if (month ==2) {
+//       System.out.println("feb");
+//     } else if (month ==3) {
+//       System.out.println("mar");
+//     } else if (month ==4) {
+//       System.out.println("apr");
+//     } else if (month ==5) {
+//       System.out.println("may");
+//     } else if (month ==6) {
+//       System.out.println("jun");
+//     } else if (month ==7) {
+//       System.out.println("jul");
+//     } else if (month ==8) {
+//       System.out.println("agu");
+//     } else if (month ==9) {
+//       System.out.println("sep");
+//     } else if (month ==10) {
+//       System.out.println("oct");
+//     } else if (month ==11) {
+//       System.out.println("nov");
+//     } else if (month ==12) {
+//       System.out.println("dec");
+//     }
+//   }
+// }
+
+// import java.util.Calendar;
+// public class Main {
+//   public static void main(String[] args) {
+//     int month = Calendar.getInstance().get(Calendar.MONTH) + 1;
+
+//     String season = "";
+
+//     if(month == 12 || month == 1 || month==2) {
+//       System.out.println("겨울");
+//     } else if(month == 3 || month  ==4 || month==5) {
+//       System.out.println("봄");
+//     } else if(month == 6||month == 7||month == 8) {
+//         System.out.println("여름");
+//     } else if(month == 9||month == 10||month == 11) {
+//         System.out.println("겨울");
+//   }
+// }
+// }
 
 // import java.util.Calendar;
 // public class Main {
